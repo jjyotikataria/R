@@ -1,0 +1,14 @@
+---
+title: "Single Cell Advanced Analysis "
+
+date: "Date: `r format(Sys.time(),'%B %d, %Y' )`"
+
+output:
+  rmdformats::readthedown:
+    highlight: tango
+    toc_depth: 4
+    gallery: TRUE
+    lightbox: TRUE
+    keep_md: yes
+    css: custom.css
+---
