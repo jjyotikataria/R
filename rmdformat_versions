@@ -1,0 +1,17 @@
+#R3.5
+
+packageVersion("markdown")
+[1] ‘0.9’
+packageVersion("rmarkdown")
+[1] ‘1.13’
+packageVersion("rmdformats") ...............
+[1] ‘0.3.6’
+
+#RStudio local
+
+packageVersion("markdown")
+[1] ‘1.1’
+packageVersion("rmarkdown")
+[1] ‘2.8’
+packageVersion("rmdformats") ...................
+[1] ‘0.3.6’
