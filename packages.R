@@ -14,8 +14,9 @@ rownames(ip) <- NULL
 
 ##Force install a version
 
+library(devtools)
+install_version('rmdformats', version = '0.3.6')
 
-library(devtools) install_version('rmarkdown', version = '1.8')
 -------
 
 ## Check if the packages are installed or not
