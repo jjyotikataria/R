@@ -25,4 +25,4 @@ jpeg("Time0_vs_11day-tp_vs_others_Normalized_Counts.jpeg",width=3000,height=2000
 
 ggplot(data = b_reshape, aes(Genes, Expression)) + geom_boxplot() + geom_point() + scale_x_discrete(labels = function(x) str_wrap(x, width = 1)) + ggtitle("Time0 vs 11 day vs others") + ylab("log2(FPKM)") + xlab("Common genes") + theme(text = element_text(face="bold")) + theme(axis.text.x = element_text(angle = 90, hjust = 0.95, vjust = 0.2, size = 6)) + theme(plot.title = element_text(hjust = 0.5))
 dev.off()
----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
