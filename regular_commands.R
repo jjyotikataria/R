@@ -18,3 +18,6 @@ write.xlsx(df, "name.xlsx")
 
 
 
+## Colors
+
+## http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
