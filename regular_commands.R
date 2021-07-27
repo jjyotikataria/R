@@ -25,6 +25,13 @@ x_filt <- x[x[2] > 3,]
 
 list <- as.vector(x[["Var1"]])   ##The first col header is Var1
 
+## Table >> Df
+
+x <- as.data.frame(table(pred.hesc$labels))
+
+##
+
+
 ## Colors
 
 ## http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
