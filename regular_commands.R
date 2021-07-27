@@ -17,6 +17,13 @@ library(openxlsx)
 write.xlsx(df, "name.xlsx")
 
 
+## Filtering a dataframe
+
+x_filt <- x[x[2] > 3,]
+
+## Df >> List
+
+list <- as.vector(x[["Var1"]])   ##The first col header is Var1
 
 ## Colors
 
