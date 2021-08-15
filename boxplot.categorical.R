@@ -20,3 +20,8 @@ data3$Revenue <- as.numeric(gsub('\\$','', data3$Revenue))
 data3 <- data3[data2$Country =="USA",]
 data3$State.or.Province <- as.factor(data3$State.or.Province)
 boxplot(Revenue ~ State.or.Province, data = data3)
+
+
+
+![alt text]()
+
