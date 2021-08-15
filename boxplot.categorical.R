@@ -23,5 +23,5 @@ boxplot(Revenue ~ State.or.Province, data = data3)
 
 
 
-![alt text]()
+![alt text](https://github.com/jjyotikataria/R/blob/main/figures/boxplot.png)
 
