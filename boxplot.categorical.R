@@ -3,8 +3,8 @@
 ## Los Angeles	    CA	               27.38
 ## Los Angeles	    CA	               14.9
 ## Bremerton	    WA	               5.52
-## Portland	     OR	               4.44
-## Beverly Hills  CA	               14
+## Portland	    OR	               4.44
+## Beverly Hills   CA	               14
 
 ## Create side-by-side box plots for revenues broken down by state or province. Are these distributions essentially symmetric or skewed?
 
