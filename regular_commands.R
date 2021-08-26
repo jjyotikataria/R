@@ -29,8 +29,13 @@ list <- as.vector(x[["Var1"]])   ##The first col header is Var1
 
 x <- as.data.frame(table(pred.hesc$labels))
 
-##
+## Setting up ggplot theme
 
+My_Theme = theme(
+  axis.title.x = element_text(size = 10),
+  axis.text.x = element_text(size = 8),
+  axis.text.y = element_text(size = 8),
+  axis.title.y = element_text(size = 10))
 
 ## Colors
 
