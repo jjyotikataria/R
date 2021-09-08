@@ -37,6 +37,16 @@ My_Theme = theme(
   axis.text.y = element_text(size = 8),
   axis.title.y = element_text(size = 10))
 
+## Find out the intersection of two dataframes(common columns) and then remove them from another dataframe
+DF <- data.frame(
+  x=1:10,
+  y=10:1,
+  z=rep(5,10),
+  a=11:20
+)
+drops <- c("x","z")
+DF[ , !(names(DF) %in% drops)]
+
 ## Colors
 
 ## http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
