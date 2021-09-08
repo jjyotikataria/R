@@ -1,4 +1,4 @@
-## Input csv
+### Input csv
 "","Cell_Type","Sample_1","Sample_2"
 "1","CD8 T cells",2375,4038
 "2","Unknown",2114,3109
@@ -11,8 +11,9 @@
 "9","Monocytes",3,7
 "10","Dendritic cells",5,8
 
-## Output : grouped bar plot showing cell type proportions across samples
+### Output : grouped bar plot showing cell type proportions across samples
 
+```{r, echo=FALSE}
 library(dplyr)
 library(reshape2)
 
@@ -42,3 +43,4 @@ ggsave(plot6, file=paste0("scSorter_barplot_percentage.png"), width = 12, height
 
 ![alt text](https://github.com/jjyotikataria/R/blob/main/figures/grouped_barplot.png)
 
+```
