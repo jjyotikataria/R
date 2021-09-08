@@ -1,4 +1,4 @@
-### Input csv
+### Input : csv
 "","Cell_Type","Sample_1","Sample_2"<br>
 "1","CD8 T cells",2375,4038<br>
 "2","Unknown",2114,3109<br>
@@ -41,6 +41,7 @@ plot6<-p + theme_classic() + ggtitle("Proportion of Cell Types") +  theme(text =
 ggsave(plot6, file=paste0("scSorter_barplot_percentage.png"), width = 12, height =10, units = "cm", dpi=300)
 
 ```
+
 ![alt text](https://github.com/jjyotikataria/R/blob/main/figures/grouped_barplot.png)
 
 
