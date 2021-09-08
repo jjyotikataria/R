@@ -28,17 +28,17 @@ colnames(melted)<-c("Cell_Type","Sample","Count")
 check<-as.data.frame(melted%>%group_by(Sample)%>%mutate(Percentage=paste0(round(Count/sum(Count)*100,3))))
 check<-check[,-3]
 
-name<-"scsorter_cell_percentage.csv"
+name<-"cell_percentage.csv"
 write.csv(check,name)
 
-x<-read.csv("scsorter_cell_percentage.csv")
+x<-read.csv("cell_percentage.csv")
 x<-x[,-1]
 
 p<-ggplot(x, aes(x = Sample, y = Percentage))+ geom_col(aes(fill =Cell_Type), width = 0.7) +
 scale_fill_manual(values = cluster.colors[names(cluster.colors)%in%x$Cell_Type])
 
 plot6<-p + theme_classic() + ggtitle("Proportion of Cell Types") +  theme(text = element_text(face="bold")) + theme(plot.title = element_text(hjust=0.2)) + theme(text = element_text(size = 5)) + theme(legend.text = element_text(size=3)) + theme(legend.key.size = unit(0.2, "cm")) + guides(fill=guide_legend(title="Cell Type"))
-ggsave(plot6, file=paste0("scSorter_barplot_percentage.png"), width = 12, height =10, units = "cm", dpi=300)
+ggsave(plot6, file=paste0("barplot_percentage.png"), width = 12, height =10, units = "cm", dpi=300)
 
 ```
 
