@@ -1,14 +1,14 @@
 ### Input csv
-"","Cell_Type","Sample_1","Sample_2"
-"1","CD8 T cells",2375,4038
-"2","Unknown",2114,3109
-"3","NK cells",351,633
-"4","CD4 T cells",433,804
-"5","Macrophages",207,26
-"6","Neutrophils",13,453
-"7","MDSC",7,15
-"8","B cells",11,200
-"9","Monocytes",3,7
+"","Cell_Type","Sample_1","Sample_2"<br>
+"1","CD8 T cells",2375,4038<br>
+"2","Unknown",2114,3109<br>
+"3","NK cells",351,633<br>
+"4","CD4 T cells",433,804<br>
+"5","Macrophages",207,26<br>
+"6","Neutrophils",13,<br>
+"7","MDSC",7,15<br>
+"8","B cells",11,200<br>
+"9","Monocytes",3,7<br>
 "10","Dendritic cells",5,8
 
 ### Output : grouped bar plot showing cell type proportions across samples
