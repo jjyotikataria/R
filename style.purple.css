@@ -1,0 +1,81 @@
+#main .nav-pills > li.active > a,
+#main .nav-pills > li.active > a:hover,
+#main .nav-pills > li.active > a:focus {
+   background-color: #BA55D3;
+}
+
+h1.title {
+    margin-top: 0em;
+    width: max-content;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+    font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+    font-weight: 700;
+    color: #BA55D3;
+}
+
+
+#toc {
+    background: thistle;
+}
+
+#toc li a {
+  color: black !important;
+}
+
+
+#toc ul.nav li.active li ul {
+    background-color: #BA55D3 !important;
+    color: white !important;
+    font-weight: normal !important;
+}
+
+#toc ul.nav li a:hover {
+    background-color: #BA55D3 !important;
+    color: white !important;
+    font-weight: normal !important;
+}
+
+#main .nav-pills {
+    margin-left: -22px;
+}
+
+#main .nav-pills > li > a:hover {
+  background-color: #808080;
+}
+
+
+#postamble {
+    color: #ffffff;
+    background: #BA55D3;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    padding: 9px;
+}
+
+
+body {
+    background: initial;
+    background-color: initial;
+    color: #000000;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-weight: normal;
+    margin: 0;
+    min-height: 100%;
+}
+
+
+
+#sidebar h2 {
+    z-index: 200;
+    background-color: #BA55D3;
+    text-align: center;
+    padding: 0.809em;
+    display: block;
+    color: #fcfcfc;
+    font-size: 100%;
+    margin-top: -1px;
+    margin-bottom: 0.809em;
+}
+
+
