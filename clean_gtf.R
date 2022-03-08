@@ -12,6 +12,21 @@
 library(dplyr)
 library(rtracklayer)
 gtf <- rtracklayer::import("GRCh38ERCC.ensembl91.gtf")
+gtf <- as.data.frame(gtf)
+
+cleaned_gtf<- select(gtf,c("seqnames","start","end","strand","source","type","gene_id","gene_name","gene_biotype"))
+write.csv(cleaned_gtf,"cleaned_gtf.csv", row.names=FALSE)
+
+only_gene <- cleaned_gtf[cleaned_gtf$type=="gene",]
+write.csv(cleaned_gtf,"genes_gtf.csv", row.names=FALSE)
+only_pc_genes <- only_gene[only_gene$gene_biotype=="protein_coding",]
+
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------
+library(dplyr)
+library(rtracklayer)
+gtf <- rtracklayer::import("GRCh38ERCC.ensembl91.gtf")
+
 final <- as.data.frame(gtf@elementMetadata@listData)
 final2 <- select(final,c("source","type","gene_id","gene_name","gene_biotype","transcript_id","transcript_id","transcript_name","transcript_biotype"))
 
