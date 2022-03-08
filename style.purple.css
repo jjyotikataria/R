@@ -70,6 +70,7 @@ h1, h2, h3, h4, h5, h6, legend {
     background: #BA55D3;
     font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     padding: 9px;
+    border-top: solid 0px;
 }
 
 
@@ -95,6 +96,17 @@ body {
     font-size: 100%;
     margin-top: -1px;
     margin-bottom: 0.809em;
+    
 }
 
-
+#sidebar {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ba55d3;
+    z-index: 200;
+    font-size: 16px;
+}
