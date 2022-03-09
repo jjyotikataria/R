@@ -1,3 +1,10 @@
+# Replacing selected values by something else in one column of the dataframe
+
+project_samples$Sample_type <- ifelse(project_samples$Sample_type=="1","FFPE1",
+                     ifelse(project_samples$Sample_type=="2","FFPE2",
+                     ifelse(project_samples$Sample_type=="5","FFPE5",as.character(project_samples$Sample_type))))
+
+# Deleting the environment variables
 rm(list = ls())
 
 x <- matrix(rep(2:10), 3, 3)
