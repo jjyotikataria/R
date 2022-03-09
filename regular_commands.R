@@ -7,6 +7,12 @@ project_samples$Sample_type <- ifelse(project_samples$Sample_type=="1","FFPE1",
 # Deleting the environment variables
 rm(list = ls())
 
+# Create a new column named ffpe here according to the selected values with case_when in the new dataframe mod
+mod <- melted %>% 
+  mutate(ffpe =case_when(variable == "EA5045787" | variable ==  "EA5045788" | variable ==  "EA5045789" ~ "FFPE1",
+                         variable ==  "EA5045803" | variable ==  "EA5045804" | variable ==  "EA5045805" ~ "FFPE2",
+                         variable ==  "EA27-605291" | variable ==  "EA27-605292" ~ "FFPE5"))
+
 x <- matrix(rep(2:10), 3, 3)
 > x
      [,1] [,2] [,3]
