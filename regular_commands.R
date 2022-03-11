@@ -13,6 +13,10 @@ mod <- melted %>%
                          variable ==  "EA5045803" | variable ==  "EA5045804" | variable ==  "EA5045805" ~ "FFPE2",
                          variable ==  "EA27-605291" | variable ==  "EA27-605292" ~ "FFPE5"))
 
+# Make the labels inclined at 45 degree
++ theme(axis.text.x = element_text(angle = 45, hjust=1, vjust=1)) 
+
+
 x <- matrix(rep(2:10), 3, 3)
 > x
      [,1] [,2] [,3]
