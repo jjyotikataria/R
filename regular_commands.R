@@ -20,6 +20,10 @@ mod <- melted %>%
 # Make the ggtitle centred
 + theme(plot.title = element_text(hjust=0.5))
 
+
+# Using RColorBrewer palette
++ scale_fill_brewer(palette = "Set2")
+
 x <- matrix(rep(2:10), 3, 3)
 > x
      [,1] [,2] [,3]
