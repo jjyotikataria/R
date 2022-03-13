@@ -29,6 +29,8 @@ mod <- melted %>%
 pc_counts_proc <- pc_counts %>% filter_all(all_vars(.>5))  #6598 genes
 
 
+# Match function to match only intersection genes in the dataframe
+pc_counts_tpm_proc <- pc_counts_proc[rownames(pc_counts_proc) %in% intersection_genes,]
 
 x <- matrix(rep(2:10), 3, 3)
 > x
