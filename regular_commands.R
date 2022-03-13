@@ -24,6 +24,12 @@ mod <- melted %>%
 # Using RColorBrewer palette
 + scale_fill_brewer(palette = "Set2")
 
+
+# Filtering all the column values greater than threshold
+pc_counts_proc <- pc_counts %>% filter_all(all_vars(.>5))  #6598 genes
+
+
+
 x <- matrix(rep(2:10), 3, 3)
 > x
      [,1] [,2] [,3]
