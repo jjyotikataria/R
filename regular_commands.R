@@ -24,6 +24,13 @@ mod <- melted %>%
 # Using RColorBrewer palette
 + scale_fill_brewer(palette = "Set2")
 
+# Change legend size and font and position
+
+My_legend <- theme(legend.key.height = unit(0.6, 'cm'), #change legend key height
+        legend.key.width = unit(0.6, 'cm'), #change legend key width
+        legend.title = element_text(size=8, face="bold"), #change legend title font size
+        legend.text = element_text(size=8),
+        legend.position = "right")
 
 # Filtering all the column values greater than threshold
 pc_counts_proc <- pc_counts %>% filter_all(all_vars(.>5))  #6598 genes
