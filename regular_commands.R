@@ -32,6 +32,10 @@ My_legend <- theme(legend.key.height = unit(0.6, 'cm'), #change legend key heigh
         legend.text = element_text(size=8),
         legend.position = "right")
 
+## Font face = ("plain", "italic", "bold", "bold.italic")
+
+
+
 # Filtering all the column values greater than threshold
 pc_counts_proc <- pc_counts %>% filter_all(all_vars(.>5))  #6598 genes
 
