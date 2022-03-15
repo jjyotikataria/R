@@ -20,9 +20,12 @@ mod <- melted %>%
 # Make the ggtitle centred
 + theme(plot.title = element_text(hjust=0.5))
 
-
 # Using RColorBrewer palette
 + scale_fill_brewer(palette = "Set2")
+
+# Using manual colors in ggplot
+
++ scale_fill_manual(values=colors)
 
 # Change legend size and font and position
 
