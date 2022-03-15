@@ -16,7 +16,6 @@ mod <- melted %>%
 # Make the labels inclined at 45 degree
 + theme(axis.text.x = element_text(angle = 45, hjust=1, vjust=1)) 
 
- 
 # Make the ggtitle centred
 + theme(plot.title = element_text(hjust=0.5))
 
@@ -24,7 +23,7 @@ mod <- melted %>%
 + scale_fill_brewer(palette = "Set2")
 
 # Using manual colors in ggplot
-
+colors <- c("#00AFBB", "#E7B800","#EE0099","darkgreen","#FC4E07","#BB3099")
 + scale_fill_manual(values=colors)
 
 # Change legend size and font and position
