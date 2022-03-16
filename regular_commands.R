@@ -1,3 +1,12 @@
+## Setting up ggplot theme
+
+My_Theme = theme(
+  axis.title.x = element_text(size = 10, face="bold"),
+  axis.text.x = element_text(size = 8, hjust=1, vjust=1),
+  axis.text.y = element_text(size = 8),
+  axis.title.y = element_text(size = 10, face="bold"),
+  plot.title = element_text(size=11, face="bold",hjust=0.5, colour="red"))
+
 # Replacing selected values by something else in one column of the dataframe
 
 project_samples$Sample_type <- ifelse(project_samples$Sample_type=="1","FFPE1",
@@ -73,15 +82,6 @@ list <- as.vector(x[["Var1"]])   ##The first col header is Var1
 ## Table >> Df
 
 x <- as.data.frame(table(pred.hesc$labels))
-
-## Setting up ggplot theme
-
-My_Theme = theme(
-  axis.title.x = element_text(size = 10),
-  axis.text.x = element_text(size = 8),
-  axis.text.y = element_text(size = 8),
-  axis.title.y = element_text(size = 10),
-  plot.title=element_text(size=8))
 
 ## Find out the intersection of two dataframes(common columns) and then remove them from another dataframe
 DF <- data.frame(
