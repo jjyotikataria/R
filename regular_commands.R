@@ -80,7 +80,8 @@ My_Theme = theme(
   axis.title.x = element_text(size = 10),
   axis.text.x = element_text(size = 8),
   axis.text.y = element_text(size = 8),
-  axis.title.y = element_text(size = 10))
+  axis.title.y = element_text(size = 10),
+  plot.title=element_text(size=8))
 
 ## Find out the intersection of two dataframes(common columns) and then remove them from another dataframe
 DF <- data.frame(
