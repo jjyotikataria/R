@@ -64,7 +64,7 @@ cdf_plot(barcodes_ffpe521)
 
 ## Plotting in grid
 
-rl = lapply(list.files(pattern=".png"), png::readPNG)
+rl = lapply(list.files(pattern="^CDF_.*png"), png::readPNG)
 gl = lapply(rl, grid::rasterGrob)
 gridExtra::grid.arrange(grobs=gl)
 
