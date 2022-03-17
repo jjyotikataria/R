@@ -13,6 +13,10 @@ genes_3  "ENSG00000283706" "ENSG00000206549"
 duplicated_genes <- as.character(unlist(duplicated_genes))
 
 
+## Remove certain rows from the dataframe matching a certain columm value in a character vector
+
+meta_all <- meta_all[ !meta_all$Sample.ID %in% controls,]
+
 ## Setting up ggplot theme
 
 My_Theme = theme(
