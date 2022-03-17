@@ -44,27 +44,23 @@ colnames(barcodes_ffpe521) <- c("Barcode","FFPE1","FFPE2","FFPE5")
 
 cdf_plot <- function(sample_list_file){
               for(i in 1:nrow(sample_list_file)){
-                    print(i)
                     sample_list <- sample_list_file[,-1]
                     samplee_list <- as.character(sample_list[i,])
                     title_plot <- as.character(sample_list_file[i,][1])
                     data <- melted[which(melted$Sample %in% samplee_list),]
                     data$Count = log(data$Count + 1)
-                    p2 <- ggplot(data, aes(x=Count, colour=FFPE_BLOCKS, group=FFPE_BLOCKS)) + stat_ecdf() + theme_bw() +         
-                    ggtitle(paste0("ECDF from log TPM for ",title_plot)) +  theme(plot.title = element_text(hjust=0.5)) + My_Theme
-                    ggsave(p2, file = paste0("CDF_",i,"_",title_plot,".png"),
+                    p2 <- ggplot(data, aes(x=Count, colour=FFPE_BLOCKS, group=FFPE_BLOCKS)) + stat_ecdf() + theme_bw() +   ggtitle(title_plot) + My_Theme
+                    ggsave(p2, file = paste0("CDF_TPM_for_5_2_1_",title_plot,".png"),
                     device = "png",
-                    width = 6,
-                    height = 4,
-                    dpi = 250, units = "in")
+                    width = 12,
+                    height = 6,
+                    dpi = 400, units = "cm")
                     }
 }
 
 cdf_plot(barcodes_ffpe521)
 
-## Plotting in grid
-
-rl = lapply(list.files(pattern="^CDF_.*png"), png::readPNG)
+rl = lapply(list.files(pattern="^CDF_TPM_for_5_2_1_.*png"), png::readPNG)
 gl = lapply(rl, grid::rasterGrob)
-gridExtra::grid.arrange(grobs=gl)
+gridExtra::grid.arrange(grobs=gl, ncol=3, nrow=5)
 
