@@ -1,3 +1,18 @@
+## Add a new column after a certain column
+
+meta_all <- meta_all %>%
+            add_column(QC.Percent.Reads.Aligned = meta_all$QC.FractionReadsAligned*100,.after="QC.FractionReadsAligned")
+
+
+## Convert all matrix items into a character vector
+         [,1]              [,2]             
+genes_1  "ENSG00000239605" "ENSG00000273269"
+genes_2  "ENSG00000128655" "ENSG00000284741"
+genes_3  "ENSG00000283706" "ENSG00000206549"
+
+duplicated_genes <- as.character(unlist(duplicated_genes))
+
+
 ## Setting up ggplot theme
 
 My_Theme = theme(
