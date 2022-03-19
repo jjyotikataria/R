@@ -3,6 +3,10 @@
 meta_all <- meta_all %>%
             add_column(QC.Percent.Reads.Aligned = meta_all$QC.FractionReadsAligned*100,.after="QC.FractionReadsAligned")
 
+## Convert data type of selected columns all together
+qc_columns <- c("QC.ForwardReadCount","QC.ReverseReadCount","QC.ReverseReadCount","QC.FractionReadsAligned","QC.FractionContaminatedReads","QC.PercentDuplication","QC.FractionRibosomalBases","QC.EstimatedLibrarySize","QC.DynamicRange","QC.FractionCodingBases","QC.FractionUTRBases","QC.FractionIntronicBases","QC.FractionIntergenicBases") 
+
+meta_all %>% mutate_at(c(qc_columns), as.numeric)
 
 ## Convert all matrix items into a character vector
          [,1]              [,2]             
