@@ -16,6 +16,11 @@ genes_3  "ENSG00000283706" "ENSG00000206549"
 
 duplicated_genes <- as.character(unlist(duplicated_genes))
 
+## Replacing the dot in the column names by hyphen
+names(pc_counts) <- gsub("\\_","-",names(pc_counts))
+names(pc_counts) <- gsub("00","",names(pc_counts))
+names(pc_counts) <- gsub("-0","-",names(pc_counts))
+
 
 ## Remove certain rows from the dataframe matching a certain columm value in a character vector
 
