@@ -8,6 +8,13 @@ qc_columns <- c("QC.ForwardReadCount","QC.ReverseReadCount","QC.ReverseReadCount
 
 meta_all %>% mutate_at(c(qc_columns), as.numeric)
 
+## Mutate all columns
+
+filt_tpm <- filt_tpm %>%
+    mutate(across(everything(), ~ifelse( .x > 0.5, 1,0)))
+
+## 
+
 ## Convert all matrix items into a character vector
          [,1]              [,2]             
 genes_1  "ENSG00000239605" "ENSG00000273269"
