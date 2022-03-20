@@ -35,6 +35,13 @@ My_Theme = theme(
   axis.title.y = element_text(size = 10, face="bold"),
   plot.title = element_text(size=11, face="bold",hjust=0.5, colour="red"))
 
+## Change y axis labels 
+scale_y_continuous(labels = label_number(suffix=" M", scale= 1e-6))  
+scale_y_continuous(labels = scales::comma)
+scale_y_continuous(labels = unit_format(unit = "M", scale = 1e-6)) + 
+scale_y_continuous(labels = paste0(ylab, "M"),
+                     breaks = 10^6 * ylab) +
+
 # Replacing selected values by something else in one column of the dataframe
 
 project_samples$Sample_type <- ifelse(project_samples$Sample_type=="1","FFPE1",
