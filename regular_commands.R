@@ -13,7 +13,9 @@ meta_all %>% mutate_at(c(qc_columns), as.numeric)
 filt_tpm <- filt_tpm %>%
     mutate(across(everything(), ~ifelse( .x > 0.5, 1,0)))
 
-## 
+## Fetching names not in controls vector
+samples <- meta_all[ !meta_all$File_based_name %in% controls,]$File_based_name
+
 
 ## Convert all matrix items into a character vector
          [,1]              [,2]             
