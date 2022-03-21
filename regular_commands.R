@@ -30,6 +30,8 @@ names(pc_counts) <- gsub("\\_","-",names(pc_counts))
 names(pc_counts) <- gsub("00","",names(pc_counts))
 names(pc_counts) <- gsub("-0","-",names(pc_counts))
 
+## Match and fetch another column
+scores$day_op <- meta$Operator_Day[match(row.names(scores),meta$File_based_name)]
 
 ## Remove certain rows from the dataframe matching a certain columm value in a character vector
 
