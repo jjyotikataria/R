@@ -30,6 +30,12 @@ names(pc_counts) <- gsub("\\_","-",names(pc_counts))
 names(pc_counts) <- gsub("00","",names(pc_counts))
 names(pc_counts) <- gsub("-0","-",names(pc_counts))
 
+## Replacing everything before something
+
+melted$rep<- gsub(".*_E1_","",melted$Replicate_sample)
+melted$rep <- gsub(".*[A-Z][0-9]+_","",melted$rep)
+melted$rep <- gsub(".*[0-9][A-Z]+_","",melted$rep)
+
 ## Match and fetch another column
 scores$day_op <- meta$Operator_Day[match(row.names(scores),meta$File_based_name)]
 
