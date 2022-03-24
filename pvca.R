@@ -28,5 +28,4 @@ colnames(df) <- c("Effect","Label")
 
 
 ggplot(df, aes(x=Label,y=Effect)) + geom_bar(stat="identity", fill="lightblue") +
-   theme_bw() + xlab("Component") + ylab("PVCA Value") + theme(axis.text.x = element_text(angle = 45, hjust=0.5))  + geom_text(aes(label = round(Effect,2)), size = 3, hjust = 0.5, vjust = -1.5, position ="stack") 
-
+   theme_bw() + xlab("Component") + ylab("PVCA Value\n") + theme(axis.text.x = element_text(angle = 45, hjust=0.5, vjust=0.5))  + geom_text(aes(label = round(Effect,2)), size = 3, hjust = 0.5, vjust = -0.5) 
