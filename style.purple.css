@@ -15,7 +15,6 @@ h1, h2, h3, h4, h5, h6, legend {
     color: #BA55D3;
 }
 
-
 #toc {
     background: thistle;
 }
@@ -43,6 +42,15 @@ h1, h2, h3, h4, h5, h6, legend {
 
 #main .nav-pills > li > a:hover {
   background-color: #808080;
+}
+
+* {
+    box-sizing: initial;
+}
+
+#main .nav-pills > li > a {
+    padding: 3px 12px !important;
+    margin-right: -16px !important;
 }
 
 #main :not(.leaflet-control) > a {
