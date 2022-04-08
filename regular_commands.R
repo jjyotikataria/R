@@ -1,3 +1,8 @@
+## Finding columns which have NA in them
+
+colSums(is.na(meta_all))
+names(which(colSums(is.na(meta_all))>0))
+
 ## Add a new column after a certain column
 
 meta_all <- meta_all %>%
