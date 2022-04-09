@@ -3,6 +3,9 @@
 colSums(is.na(meta_all))
 names(which(colSums(is.na(meta_all))>0))
 
+## Grep the columns which have "Ctrl" pattern
+controls <- unique(meta_all$Sample[grepl("Ctrl",meta_all$Sample)])
+
 ## Add a new column after a certain column
 
 meta_all <- meta_all %>%
