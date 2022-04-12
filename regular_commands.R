@@ -1,3 +1,8 @@
+## Replace multiple patterns together from a column
+combined_bbrc_meta$sample <- mgsub::mgsub(combined_bbrc_meta$sample,c("_A","_B","_C","_1","_2","_7","S-"), c("","","","","","","S"))
+
+
+
 ## Finding columns which have NA in them
 
 colSums(is.na(meta_all))
