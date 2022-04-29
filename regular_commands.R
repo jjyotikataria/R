@@ -2,6 +2,20 @@
 combined_bbrc_meta$sample <- mgsub::mgsub(combined_bbrc_meta$sample,c("_A","_B","_C","_1","_2","_7","S-"), c("","","","","","","S"))
 
 
+## Partial string matching in a column in R
+ffpe_info_bbrc <- ffpe_info_bbrc[!str_detect(ffpe_info_bbrc$Var1, "Ctrl"), ]
+
+
+## Merging two columns by a certain common column columnwise
+df<- merge(ffpe_info_bbrc,ffpe_info_ea, by="Var1")
+
+
+## Changing a factor column into numeric column
+read_len$Var1<- as.numeric(as.character(read_len$Var1))
+
+
+## Changing 
+
 
 ## Finding columns which have NA in them
 
